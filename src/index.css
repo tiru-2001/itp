@@ -1,0 +1,45 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+:root {
+  --theme-color: #d39259;
+  --color1: #ba7c46;
+  --main-heading-color: rgb(48, 48, 48);
+  --button-bg: rgb(243, 127, 68);
+  --icon-bg: rgb(197, 128, 80);
+  --gray: rgb(72, 74, 78);
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.open-sans-setting {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+ul li {
+  list-style-type: none;
+  font-weight: 500;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.main_heading {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--main-heading-color);
+  text-align: center;
+}
+
+.sub_heading {
+  font-size: 2.6rem;
+  font-weight: 600;
+}

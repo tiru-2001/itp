@@ -1,0 +1,18 @@
+.counseling_container {
+  display: flex;
+  align-items: center;
+  flex-basis: 48%;
+  gap: 20px;
+  section {
+    h1 {
+      font-weight: 600;
+      font-size: 1.4rem;
+      color: rgb(56, 55, 55);
+    }
+    p {
+      font-size: 1.1rem;
+      color: gray;
+      font-weight: 400;
+    }
+  }
+}
