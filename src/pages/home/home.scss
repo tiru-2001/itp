@@ -189,6 +189,41 @@
       }
     }
   }
+
+  //section12 container starts
+  .section12_container{
+    width: 100%;
+    margin: 50px auto;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+
+    .section12_heading{
+      text-align: center;
+      padding: 0 50px;
+      
+
+      h2{
+        font-weight: bold;
+        font-size: 3rem;
+        padding: 15px 15px;
+      }
+      p{
+        line-height: 30px;
+        font-size: 1.1rem;
+        font-weight: 400;
+       
+      }
+    
+    }
+    
+    .section12_content {
+      @include flex(row, null, center, 15px);
+      flex: 1;
+      flex-wrap: wrap;
+    }
+  } 
+  
   // section13 container
   .section13_container {
     display: flex;
