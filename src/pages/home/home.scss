@@ -1,5 +1,10 @@
 @import "../../globalscss/global.scss";
 .home_container {
+  //section1_starts
+  .section1_container {
+    height: 90vh;
+  }
+
   // section3 stars
   .section3_container {
     margin: 120px 0px;
@@ -189,6 +194,7 @@
       }
     }
   }
+
   // section13 container
   .section13_container {
     display: flex;

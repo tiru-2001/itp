@@ -1,0 +1,103 @@
+@import "../../globalscss/global.scss";
+.app__login-container {
+  min-height: 100vh;
+  background-position: center center;
+  background-size: cover;
+  background-image: url("https://images.unsplash.com/photo-1689108126187-407e71af7e50?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjY4fHx3aGl0ZSUyMCUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D");
+  display: flex;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+  .app__login-subcontainer {
+    margin: 20px 0px;
+    box-shadow: 0px 0px 20px rgba(120, 120, 120, 0.5);
+    height: 500px;
+    width: 60%;
+    display: flex;
+    .left {
+      background: url("../../assets/images/signBg.jpg");
+      backdrop-filter: blur(20px);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 55%;
+      display: flex;
+      padding: 10px 30px;
+      align-items: center;
+      .title-container {
+        h1 {
+          color: rgb(66, 54, 28);
+          text-align: start;
+        }
+        p {
+          padding: 10px 0px;
+          color: rgb(163, 91, 91);
+          font-size: 1.5rem;
+          font-weight: 500;
+        }
+      }
+    }
+    .right {
+      background-color: rgba(255, 255, 255, 0.295);
+      width: 45%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      .app__right-subContainer {
+        padding: 10px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        .app__sign-title {
+          display: flex;
+          flex-direction: column;
+          gap: 18px;
+          h1 {
+            font-weight: bold;
+            font-size: 2.5rem;
+            color: rgb(70, 67, 67);
+          }
+          p {
+            font-weight: 400;
+            font-size: 1.2rem;
+            color: var(--doctorpage-theme);
+          }
+        }
+        .app__form {
+          .form-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            input {
+              padding: 10px 5px;
+              border: none;
+              border-bottom: 1px solid gray;
+              font-size: 1rem;
+              background-color: transparent;
+              &:focus {
+                outline: 1px solid gray;
+                border: none;
+              }
+            }
+          }
+        }
+        .btn-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .btn {
+            font-size: 1.2rem;
+            padding: 10px 30px;
+            border-radius: 30px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            background-color: rgb(35, 65, 108);
+            color: white;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

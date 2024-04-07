@@ -1,9 +1,14 @@
 import "./navbar.scss";
-import { FaFacebookF } from "react-icons/fa6";
-import { FaTwitter } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { IoCall } from "react-icons/io5";
+import {
+  IoCall,
+  FaFacebookF,
+  FaLinkedin,
+  FaInstagram,
+  FaTwitter,
+} from "../../assets/icons/index";
+import { Link } from "react-router-dom";
+import logo from "../../assets/images/logo.jpg";
+import { navLinks } from "../../utils/navbarutils/index";
 const Navbar = () => {
   return (
     <div>
@@ -36,30 +41,14 @@ const Navbar = () => {
         <section class="second-nav-container">
           <nav class="second-nav">
             <section class="logo">
-              <img src="https://gracethemesdemo.com/psyclone/wp-content/themes/psyclone-pro/images/logo.png" />
+              <Link to={"/"}>
+                <img src={logo} />
+              </Link>
             </section>
             <section class="nav-items">
-              <ul>
-                <li>
-                  <a href="">Home</a>
-                </li>
-                <li>
-                  <a href="">About us</a>
-                </li>
-                <li>
-                  <a href="">Templates</a>
-                </li>
-                <li>
-                  <a href="">Blog</a>
-                </li>
-                <li>
-                  <a href="">Gallery</a>
-                </li>
-
-                <li>
-                  <a href="">Contact us</a>
-                </li>
-              </ul>
+              {navLinks.map((item, ind) => (
+                <Link to={item.path}>{item.title}</Link>
+              ))}
             </section>
           </nav>
         </section>

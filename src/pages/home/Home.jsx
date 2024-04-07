@@ -3,15 +3,27 @@ import {
   flexibleTreatment,
   services,
   right_content1,
+  homeCarouselData,
   right_content2,
 } from "../../utils/homepageUtils";
 import lady from "../../assets/images/lady.png";
 import { FaPhoneAlt, IoVideocam } from "../../assets/icons/index";
-import { Button, Card, RoundIcon, RightContent } from "../../components/index";
-
+import {
+  Button,
+  Card,
+  RoundIcon,
+  RightContent,
+  HomeCarousel,
+} from "../../components/index";
+import { useEffect } from "react";
+let count = 0;
 const Home = () => {
   return (
     <section className="home_container">
+      {/* section1 slider */}
+      <section className="section1_container">
+        <HomeCarousel carouselData={homeCarouselData} />
+      </section>
       {/* section3  */}
       <section className="section3_container">
         <h1 className="main_heading">
@@ -64,7 +76,6 @@ const Home = () => {
               </p>
             </section>
             <section className="left_bottom_container">
-              <section className="left_videoicon"></section>
               <RoundIcon icn={<IoVideocam />} bg={" --icon-bg"} />
 
               <h5>Get 15-Minutes Complimentary Zoom or Skype session</h5>
@@ -127,6 +138,10 @@ const Home = () => {
           </section>
         </section>
       </section>
+
+      {/* section12 */}
+      <section className="section12_container"></section>
+
       {/* section 13 */}
       <section className="section13_container">
         <section className="left">

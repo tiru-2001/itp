@@ -1,0 +1,6 @@
+@import "../../globalscss//global.scss";
+.doctors_container {
+  @include flex(row, null, space-around, 0px);
+  flex-wrap: wrap;
+  border: 1px solid green;
+}

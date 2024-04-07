@@ -10,6 +10,9 @@
   --button-bg: rgb(243, 127, 68);
   --icon-bg: rgb(197, 128, 80);
   --gray: rgb(72, 74, 78);
+  --doctorpage-theme: rgb(248, 158, 68);
+  --doctorpage-btn: rgb(38, 198, 142);
+  --flower-bg: rosybrown;
 }
 html {
   scroll-behavior: smooth;

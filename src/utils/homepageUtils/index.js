@@ -119,4 +119,28 @@ const right_content2 = {
   ],
   btn_text: "Read more",
 };
-export { flexibleTreatment, services, right_content1, right_content2 };
+
+const homeCarouselData = [
+  {
+    img: "https://img.freepik.com/free-photo/male-journalist-doing-his-job_23-2149029366.jpg?size=626&ext=jpg&ga=GA1.1.324249858.1698056196&semt=ais",
+    title: "Councelling for your Better Life",
+    desc: "hi Iam working hard I know I will win one day and I will help poor people",
+  },
+  {
+    img: "https://img.freepik.com/free-photo/proud-businesswoman-explaining-her-plan_1098-3418.jpg?size=626&ext=jpg&ga=GA1.1.324249858.1698056196&semt=ais",
+    title: "Best Psychologist Makes Excellent",
+    desc: "hi Iam working hard I know I will win one day and I will help poor people",
+  },
+  {
+    img: "https://img.freepik.com/free-photo/businesswomen-using-sign-language-work-communicate_23-2148740362.jpg?size=626&ext=jpg&ga=GA1.1.324249858.1698056196&semt=ais",
+    title: "There is Always a Better Way",
+    desc: "hi Iam working hard I know I will win one day and I will help poor people",
+  },
+];
+export {
+  flexibleTreatment,
+  services,
+  right_content1,
+  right_content2,
+  homeCarouselData,
+};
