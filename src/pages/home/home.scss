@@ -1,9 +1,44 @@
 @import "../../globalscss/global.scss";
+
+
+$breakpoints: (
+  xxs: 480px,
+  xs: 768px,
+  sm: 991px,
+  md: 1280px,
+  lg: 1920px,
+  xl: 5000px
+);
+
+@mixin break($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $max-width: map-get($breakpoints, $breakpoint);
+
+    @media screen and (max-width: $max-width) {
+      @content;
+    }
+  }
+
+  @else {
+    @error "Invalid breakpoint: #{$breakpoint}.";
+  }
+}
+
+
+
+
+
+
 .home_container {
+
+  // max-width: 1170px;
+  // margin-left: auto;
+  // margin-right: auto;
   // section3 stars
   .section3_container {
     margin: 120px 0px;
     @include flex(column, center, null, 60px);
+
     .section3_content {
       @include flex(row, null, center, 20px);
       flex: 1;
@@ -24,6 +59,7 @@
         font-weight: 400;
       }
     }
+
     .section5_content {
       @include flex(row, null, center, 150px);
       flex: 1;
@@ -33,15 +69,16 @@
 
   // section9_container
   .section9_container {
-    background: url("https://img.freepik.com/free-photo/copy-space-paper-flowers-ornaments_23-2148480110.jpg?w=996")
-      center/cover no-repeat fixed;
+    background: url("https://img.freepik.com/free-photo/copy-space-paper-flowers-ornaments_23-2148480110.jpg?w=996") center/cover no-repeat fixed;
     position: relative;
     margin: 100px 0px;
     @include flex(row, center, space-between, null);
     height: 70vh;
+
     .left {
       flex-basis: 70%;
       @include flex(row, center, center, 30px);
+
       .left_content {
         padding: 10px 0px;
         width: 70%;
@@ -52,6 +89,7 @@
           font-size: 1.3rem;
           color: var(--gray);
         }
+
         .left_heading {
           h1 {
             text-align: start;
@@ -65,11 +103,13 @@
             font-weight: 400;
           }
         }
+
         .left_bottom_container {
           @include flex(row, center, null, 10px);
         }
       }
     }
+
     img {
       object-fit: cover;
       position: absolute;
@@ -83,10 +123,12 @@
   .section10_container {
     @include flex(row, center, null, 10px);
     height: 90vh;
+
     .left {
       position: relative;
       @include flex(column, center, center, null);
       flex: 1;
+
       .left_top_image {
         @include flex(row, center, center, 0px);
         padding: 10px;
@@ -95,6 +137,7 @@
         position: absolute;
         top: -40px;
         left: 100px;
+
         img {
           object-fit: cover;
           border-radius: 50%;
@@ -102,10 +145,12 @@
           width: 200px;
         }
       }
+
       .left_bottom_image {
         @include flex(row, center, center, 0px);
         padding: 10px;
         border-radius: 50%;
+
         img {
           height: 450px;
           width: 450px;
@@ -114,9 +159,11 @@
         }
       }
     }
+
     .right {
       flex: 1;
       @include flex(row, null, start, 20px);
+
       .right_content {
         width: 90%;
         padding: 10px 20px;
@@ -128,14 +175,17 @@
             font-size: 1.3rem;
           }
         }
+
         h2 {
           color: var(--gray);
         }
+
         p {
           font-size: 1.1rem;
           color: rgb(104, 103, 103);
           font-weight: 400;
         }
+
         .counseling_types {
           flex-wrap: wrap;
           @include flex(row, null, center, 20px);
@@ -146,8 +196,7 @@
 
   //section11 starts
   .section11_container {
-    background: url("https://gracethemesdemo.com/psyclone/wp-content/themes/psyclone-pro/images/section8.jpg")
-      center/cover no-repeat fixed;
+    background: url("https://gracethemesdemo.com/psyclone/wp-content/themes/psyclone-pro/images/section8.jpg") center/cover no-repeat fixed;
     height: 60vh;
     @include flex(row, null, center, 0px);
 
@@ -162,9 +211,11 @@
         font-weight: 400;
       }
     }
+
     .right {
       @include flex(row, center, flex-start, 10px);
       flex-basis: 40%;
+
       .right_content {
         flex-wrap: wrap;
         @include flex(row, center, center, 20px);
@@ -180,6 +231,7 @@
             font-size: 3rem;
             color: white;
           }
+
           p {
             padding: 10px 0px;
             color: yellow;
@@ -189,6 +241,7 @@
       }
     }
   }
+
   // section13 container
   .section13_container {
     display: flex;
@@ -196,14 +249,17 @@
     margin: 50px auto;
     box-shadow: 0px 0px 13px -3px gray;
     gap: 20px;
+
     .left {
       flex: 1;
+
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
     }
+
     .right {
       flex: 2;
       @include flex(column, null, center, 20px);
@@ -212,22 +268,195 @@
         font-size: 2rem;
         font-weight: 600;
       }
+
       .right_bottom_container {
         display: flex;
         gap: 20px;
 
         .contact_details {
           @include flex(row, center, null, 10px);
+
           .contact_content {
             @include flex(column, null, null, 5px);
             font-size: 1.1rem;
             font-weight: 600;
+
             p {
               color: brown;
             }
           }
         }
       }
+    }
+  }
+
+  // Section 14
+  .section14_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3.5rem 0;
+    text-align: center;
+    max-width: 1170px;
+    margin: 30px auto;
+
+    .heading_14{
+      
+      .title {
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: #d39259;
+        margin-bottom: 5px;
+      }
+
+      .subtitle_large {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+
+      p {
+        max-width: 540px;
+        margin: 0 auto;
+      }
+    }
+    
+    .card_section{
+      display: flex;
+      gap: 10px;
+      width: 100%;
+      margin-top: 2.5rem;
+      align-items: center;
+      justify-content: space-evenly;
+
+      @include break(sm) {
+        flex-direction: column !important;
+        // width: 80%;
+      }
+
+      @include break(md) {
+        flex-direction: row;
+      }
+
+      
+    }
+  }
+
+
+  // Section 15
+
+  .section15_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3.5rem 0;
+    text-align: center;
+    background-color: #f1f4f6;
+
+    .heading15 {
+
+      .main_title {
+
+        .title {
+          font-size: 1.15rem;
+          font-weight: 600;
+          color: #d39259;
+          margin-bottom: 5px;
+        }
+
+        .subtitle_large {
+          font-size: 1.8rem;
+          font-weight: 700;
+          margin-bottom: 15px;
+        }
+
+        
+      }
+
+
+    }
+
+    .diagram15 {
+      display: flex;
+      gap: 10px;
+      max-width: 1170px;
+      margin-top: 2.5rem;
+
+      @include break(xs) {
+        flex-direction: column !important;
+      }
+
+      @include break(sm) {
+        flex-direction: row;
+      }
+
+      .single_diagram {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+
+      .work-process {
+        background-color: #f1f4f6;
+        padding: 90px 0;
+      }
+
+      .work-thumb {
+        cursor: pointer;
+        text-align: center;
+        width: 170px !important;
+        height: 170px;
+        border-radius: 50%;
+        background-color: #d39259;
+        transition: all ease 0.8s;
+      }
+      
+      .work-thumb:hover{
+        background-color: #4e2908;
+        transition: all 0.8s ease-out;
+        .work-number{
+          background-color: #d39259;
+          transition:all 0.8s ease
+        }
+      }
+
+
+      .work-thumb svg {
+        color: white;
+        position: relative;
+        width: 70px;
+        height: 70px;
+        vertical-align: middle;
+        /* margin-top: 45px; */
+      }
+
+      .work-number {
+        position: relative;
+        font-size: 28px;
+        background-color: #4e2908;
+        color: white;
+        border-radius: 50%;
+        width: 58px;
+        height: 58px;
+        justify-content: end;
+        margin-left: 100px;
+        border: 7px white solid;
+      }
+
+      .work-title {
+        font-size: 26px;
+        font-weight: 600;
+        padding-top: 20px;
+      }
+
+      .work-desc{
+        padding:0.4rem 0.6rem;
+        flex-wrap: wrap;
+      }
+
+
+
     }
   }
 }
