@@ -8,7 +8,7 @@ import {
 import lady from "../../assets/images/lady.png";
 import { FaPhoneAlt, IoVideocam } from "../../assets/icons/index";
 import { Button, Card, RoundIcon, RightContent } from "../../components/index";
-
+import { psychiatrist } from "../../utils/booking";
 const Home = () => {
   return (
     <section className="home_container">
@@ -80,14 +80,15 @@ const Home = () => {
         <section className="left">
           <section className="left_top_image">
             <img
-              src="https://images.pexels.com/photos/5234582/pexels-photo-5234582.jpeg?auto=compress&cs=tinysrgb&w=600"
+              
+                 src="https://media.istockphoto.com/id/1649071889/photo/vulnerable-woman-shares-something-with-therapist-during-therapy-session.webp?b=1&s=170667a&w=0&k=20&c=PQACie40c4Te7q4zIT45YxV9vNO-yAi8Z5jNCWZBn08="
               alt="image"
             />
           </section>
           <section className="left_bottom_image">
             <img
-              src="https://images.pexels.com/photos/4098368/pexels-photo-4098368.jpeg?auto=compress&cs=tinysrgb&w=600"
-              alt="image"
+              
+              src="https://media.istockphoto.com/id/1488894519/photo/university-student-motions-towards-her-chest-as-she-describes-the-discomfort-she-has-been.webp?b=1&s=170667a&w=0&k=20&c=bjaAtr39WLFSNtT9pFT2-lJLsl0HFUPfjIHITW5RlF0="
             />
           </section>
         </section>
@@ -127,10 +128,32 @@ const Home = () => {
           </section>
         </section>
       </section>
+      {/* section 12 */}
+      <section className="section12_container">
+         <section className="section12_heading">
+          <h2>Our Psychiatrist</h2>
+          <p>
+          Our team of expert psychiatrists provides unparalleled mental health care, delivering </p>
+          <p>compassionate and effective treatment tailored to each individual's needs.
+          </p>
+          </section>
+          <section className={"section12_content"}>
+           
+          {psychiatrist.map((item, ind) => (
+            <Card
+              key={ind}
+              data={{ ...item, height: 250, width: 250, section: 3 }}
+            />
+          ))}
+        </section>
+       </section>
+
+
       {/* section 13 */}
       <section className="section13_container">
         <section className="left">
-          <img src="https://plus.unsplash.com/premium_photo-1666299354044-88f3cf948713?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTd8fHRhbGtpbmclMjBpbiUyMHBob25lfGVufDB8fDB8fHww" />
+        
+        <img src= "https://media.istockphoto.com/id/1134890323/photo/woman-using-smartphone-the-concept-of-using-the-phone-is-essential-in-everyday-life.webp?b=1&s=170667a&w=0&k=20&c=Y-seAx-M62ly0f29GuKXvFYrRCVvPnl8MFwYSK5s1DU="></img>
         </section>
         <section className="right">
           <h3>
