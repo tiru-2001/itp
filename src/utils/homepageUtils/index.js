@@ -8,22 +8,26 @@ import {
 } from "../../assets/icons/index";
 const flexibleTreatment = [
   {
-    img: "https://plus.unsplash.com/premium_photo-1672292536170-8de3ec091ced?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTd8fGNvdW5zZWxpbmd8ZW58MHx8MHx8fDA%3D",
+    
+    img:"https://media.istockphoto.com/id/1812963712/photo/young-woman-at-mental-therapy-talking-to-female-psychologist.webp?b=1&s=170667a&w=0&k=20&c=s2i9NttNy9ukYJe3f76raBtV8ywVJvMywr9SX58_7lo=",
     title: "Career Conseling",
     desc: "We're helping people navigate their career paths.",
   },
   {
-    img: "https://plus.unsplash.com/premium_photo-1664529914557-ee01920185e2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cmVsYXRpb25zaGlwfGVufDB8fDB8fHww",
+    
+    img:"https://images.unsplash.com/photo-1539541417736-3d44c90da315?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHJlbGF0aW9uc2hpcCUyMGNvdW5zZWxsaW5nfGVufDB8fDB8fHww",
     title: "Relationship",
     desc: "We're offering support for couples in our relationships",
   },
   {
-    img: "https://plus.unsplash.com/premium_photo-1688822015890-62ee53d486d8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8d29tYW58ZW58MHx8MHx8fDA%3D",
+    
+    img:"https://plus.unsplash.com/premium_photo-1661411320406-f3948a4a2c59?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHdvbWVuJTIwc3RyZXNzZWR8ZW58MHwwfDB8fHww",
     title: "Women's Issues",
     desc: "We're actively addressing concerns impacting women",
   },
   {
-    img: "https://images.unsplash.com/photo-1521075486433-bf4052bb37bc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHdvbWFuJTIwZW1vdGlvbnN8ZW58MHx8MHx8fDA%3D",
+    
+    img:"https://plus.unsplash.com/premium_photo-1697398290582-bb3def77875f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bWFuJTIwJTIwY3J5aW5nJTIwYW5kJTIwYW5ncnl8ZW58MHwwfDB8fHww",
     title: "Troubling Emotions",
     desc: "We offer solutions to address challenging emotions",
   },
