@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Login, Parent, Home, Register } from "./pages";
+import { Login, Parent, Home, Register ,Eap} from "./pages";
 import { Booking } from "./components/index";
 
 
@@ -15,6 +15,7 @@ const App = () => {
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
           <Route path="booking" element={<Booking />} />
+          <Route path="eap" element={<Eap/>}/>
         </Routes>
       </Router>
     </>
