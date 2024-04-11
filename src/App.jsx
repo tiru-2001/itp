@@ -1,4 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+
+
+
 import {
   Login,
   Parent,
@@ -33,6 +37,7 @@ const App = () => {
             <Route path="register" element={<Register />} />
             <Route path="eap" element={<Eap />} />
           </Route>
+         
         </Routes>
       </Router>
     </>
