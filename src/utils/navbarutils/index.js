@@ -4,6 +4,7 @@ let navLinks = [
   { path: "/dietician", title: "Dietician" },
   { path: "/counseling", title: "Counseling" },
   { path: "/contact-us", title: "Contact Us" },
+  { path: "/eap", title: "Eap" },
   { path: "/blogs", title: "Blogs" },
   { path: "/login", title: "Login" },
 ];

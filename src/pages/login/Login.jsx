@@ -8,24 +8,24 @@ const Login = () => {
   const handleLogin = () => {};
   return (
     <section>
-      <div className="app__login-container">
-        <div className="app__login-subcontainer">
-          <div className="left">
-            <div className="title-container">
+      <section className="app__login-container">
+        <section className="app__login-subcontainer">
+          <section className="left">
+            <section className="title-container">
               <h1 className="main_heading">Welcome back !</h1>
               <p>You can sign in to access with your existing profile</p>
-            </div>
-          </div>
-          <div className="right">
-            <div className="app__right-subContainer">
-              <div className="app__sign-title">
+            </section>
+          </section>
+          <section className="right">
+            <section className="app__right-subContainer">
+              <section className="app__sign-title">
                 <h1>Sign In</h1>
                 <p>
                   Please enter your login information or click here to
                   registration
                 </p>
-              </div>
-              <div className="app__form">
+              </section>
+              <section className="app__form">
                 <form className="form-container">
                   <input
                     type="email"
@@ -44,13 +44,13 @@ const Login = () => {
                     type="password"
                   />
                 </form>
-              </div>
+              </section>
 
-              <div className="btn-container">
+              <section className="btn-container">
                 <button onClick={handleLogin} className="btn">
                   log In
                 </button>
-              </div>
+              </section>
               <Link
                 to="/register"
                 style={{
@@ -61,11 +61,11 @@ const Login = () => {
               >
                 If you are not registered then click the link below to register
               </Link>
-              {error && <div style={{ color: "red" }}>{error}</div>}
-            </div>
-          </div>
-        </div>
-      </div>
+              {error && <section style={{ color: "red" }}>{error}</section>}
+            </section>
+          </section>
+        </section>
+      </section>
     </section>
   );
 };

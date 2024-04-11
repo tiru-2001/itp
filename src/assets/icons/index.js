@@ -9,6 +9,8 @@ import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { IoCall } from "react-icons/io5";
+import { CiMenuBurger } from "react-icons/ci";
+import { MdCancel } from "react-icons/md";
 
 export {
   FaPeopleArrows,
@@ -22,4 +24,6 @@ export {
   FaInstagram,
   FaLinkedin,
   IoCall,
+  CiMenuBurger,
+  MdCancel,
 };

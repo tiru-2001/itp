@@ -13,6 +13,8 @@
   --doctorpage-theme: rgb(248, 158, 68);
   --doctorpage-btn: rgb(38, 198, 142);
   --flower-bg: rosybrown;
+  --color2: rgb(66, 54, 28);
+  --color3: rgb(163, 91, 91);
 }
 html {
   scroll-behavior: smooth;

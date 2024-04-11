@@ -15,11 +15,10 @@ import {
   RightContent,
   HomeCarousel,
 } from "../../components/index";
-
-import { Button, Card, RoundIcon, RightContent } from "../../components/index";
-
+import blog01 from "../../assets/images/blog01.jpg";
+import blog02 from "../../assets/images/blog02.jpg";
+import blog03 from "../../assets/images/blog03.jpg";
 import Newscard from "../../components/newscard/Newscard";
-
 import { psychiatrist } from "../../utils/booking";
 
 const Home = () => {
@@ -43,7 +42,6 @@ const Home = () => {
           ))}
         </section>
       </section>
-
       {/*section 5 starts */}
       <section className="section5_container">
         <section className="section5_heading">
@@ -54,13 +52,12 @@ const Home = () => {
           {services.map((item, ind) => (
             <Card
               key={ind}
-              data={{ ...item, height: 100, width: 100, section: 3 }}
+              data={{ ...item, height: 200, width: 200, section: 3 }}
             />
           ))}
         </section>
       </section>
-
-      {/* section 9  */}
+      {/* section 9 */}
       <section className="section9_container">
         <section className="left">
           <section className="left_content">
@@ -90,7 +87,6 @@ const Home = () => {
 
         <img src={lady} alt="lady" />
       </section>
-
       {/* section10  */}
       <section className="section10_container">
         <section className="left">
@@ -108,7 +104,6 @@ const Home = () => {
           <RightContent {...right_content1} />
         </section>
       </section>
-
       {/* section 11 starts  */}
       <section className="section11_container">
         <section className="left">
@@ -122,19 +117,19 @@ const Home = () => {
         <section className="right">
           <section className="right_content">
             <section>
-              <h1>25</h1>
+              <h1 className="main_heading">25</h1>
               <p>Years Of Experience</p>
             </section>
             <section>
-              <h1>12</h1>
+              <h1 className="main_heading">12</h1>
               <p>Qualified Doctors</p>
             </section>
             <section>
-              <h1>2950</h1>
+              <h1 className="main_heading">2950</h1>
               <p>Happy Patients</p>
             </section>
             <section>
-              <h1>75</h1>
+              <h1 className="main_heading">75</h1>
               <p>All branches</p>
             </section>
           </section>
@@ -162,7 +157,6 @@ const Home = () => {
           ))}
         </section>
       </section>
-
       {/* section 13 */}
       <section className="section13_container">
         <section className="left">
@@ -185,7 +179,6 @@ const Home = () => {
           </section>
         </section>
       </section>
-
       {/* Section 14 */}
       <div className="section14_container">
         <div className="heading_14">
@@ -195,7 +188,7 @@ const Home = () => {
         <div className="card_section">
           <Newscard
             className="card"
-            img="src/assets/images/blog01.jpg"
+            img={blog01}
             title="Blog 01"
             author="Admin"
             date="17"
@@ -203,7 +196,7 @@ const Home = () => {
             newstitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
           />
           <Newscard
-            img="src/assets/images/blog01.jpg"
+            img={blog02}
             title="Blog 01"
             author="Admin"
             date="17"
@@ -211,7 +204,7 @@ const Home = () => {
             newstitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
           />
           <Newscard
-            img="src/assets/images/blog01.jpg"
+            img={blog03}
             title="Blog 01"
             author="Admin"
             date="17"

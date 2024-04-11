@@ -9,6 +9,7 @@ import Contact from "./contact/Contact";
 import Dietician from "./dietician/Dietician";
 import Counseling from "./counseling/Counseling";
 import Blogs from "./blogs/Blogs";
+import Eap from "./eap/Eap";
 
 export {
   Home,
@@ -22,4 +23,5 @@ export {
   Booking,
   Therapist,
   Blogs,
+  Eap,
 };

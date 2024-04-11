@@ -11,6 +11,7 @@ import {
   Contact,
   Counseling,
   Blogs,
+  Eap,
 } from "./pages";
 
 const App = () => {
@@ -30,6 +31,7 @@ const App = () => {
             <Route path="contact-us" element={<Contact />} />
             <Route path="blogs" element={<Blogs />} />
             <Route path="register" element={<Register />} />
+            <Route path="eap" element={<Eap />} />
           </Route>
         </Routes>
       </Router>

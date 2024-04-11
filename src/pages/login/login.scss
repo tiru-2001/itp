@@ -1,61 +1,73 @@
 @import "../../globalscss/global.scss";
+@import "../../globalscss/responsivemixins.scss";
+
 .app__login-container {
   min-height: 100vh;
-  background-position: center center;
-  background-size: cover;
-  background-image: url("https://images.unsplash.com/photo-1689108126187-407e71af7e50?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjY4fHx3aGl0ZSUyMCUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D");
-  display: flex;
-  background-repeat: no-repeat;
-  justify-content: center;
-  align-items: center;
+  background: url("https://images.unsplash.com/photo-1689108126187-407e71af7e50?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjY4fHx3aGl0ZSUyMCUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D")
+    center center / cover no-repeat;
+  @include flex(row, center, center, 0px);
   .app__login-subcontainer {
     margin: 20px 0px;
     box-shadow: 0px 0px 20px rgba(120, 120, 120, 0.5);
     height: 500px;
     width: 60%;
     display: flex;
+    @include break(1000px) {
+      width: 80%;
+    }
+    @include break(740px) {
+      width: 90%;
+    }
+    @include break(600px) {
+      margin-top: 100px;
+    }
+    @include break(600px) {
+      @include flex(column, null, null, 0px);
+      height: max-content;
+      padding: 10px;
+    }
     .left {
-      background: url("../../assets/images/signBg.jpg");
+      background: url("../../assets/images/signBg.jpg") center/cover no-repeat;
       backdrop-filter: blur(20px);
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 55%;
-      display: flex;
       padding: 10px 30px;
-      align-items: center;
+      @include flex(row, center, null, 0px);
+      @include break(600px) {
+        flex: 1;
+      }
       .title-container {
         h1 {
-          color: rgb(66, 54, 28);
+          color: var(--color2);
           text-align: start;
+          @include break(350px) {
+            font-size: 2rem;
+          }
         }
         p {
           padding: 10px 0px;
-          color: rgb(163, 91, 91);
+          color: var(--color3);
           font-size: 1.5rem;
           font-weight: 500;
+          @include break(350px) {
+            font-size: 1.3rem;
+            text-align: start;
+          }
         }
       }
     }
     .right {
-      background-color: rgba(255, 255, 255, 0.295);
-      width: 45%;
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
+      @include flex(row, center, space-around, 0px);
       .app__right-subContainer {
         padding: 10px 20px;
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
+        @include flex(column, null, null, 30px);
         .app__sign-title {
-          display: flex;
-          flex-direction: column;
-          gap: 18px;
+          @include flex(column, null, null, 18px);
           h1 {
             font-weight: bold;
             font-size: 2.5rem;
-            color: rgb(70, 67, 67);
+            color: var(--gray);
+            @include break(350px) {
+              font-size: 1.8rem;
+            }
           }
           p {
             font-weight: 400;
@@ -65,26 +77,25 @@
         }
         .app__form {
           .form-container {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
+            @include flex(column, null, null, 20px);
             input {
               padding: 10px 5px;
               border: none;
-              border-bottom: 1px solid gray;
+              border-bottom: 1px solid var(--gray);
               font-size: 1rem;
               background-color: transparent;
               &:focus {
-                outline: 1px solid gray;
+                outline: 1px solid var(--gray);
                 border: none;
+              }
+              @include break(290px) {
+                width: 100%;
               }
             }
           }
         }
         .btn-container {
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          @include flex(row, center, center, 0px);
           .btn {
             font-size: 1.2rem;
             padding: 10px 30px;

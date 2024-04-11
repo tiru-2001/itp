@@ -1,8 +1,15 @@
 @import "../../globalscss/global.scss";
+@import "../../globalscss/responsivemixins.scss";
+
 .right_content {
-  width: 90%;
+  flex: 1;
   padding: 10px 20px;
   @include flex(column, null, null, 30px);
+  @include break(900px) {
+    @include flex(column, null, null, 15px);
+    padding: 10px 15px;
+    width: 100%;
+  }
 
   .right_content_heading {
     h5 {
@@ -12,6 +19,14 @@
   }
   h2 {
     color: var(--gray);
+    @include break(900px) {
+      @include flex(column, null, null, 15px);
+      font-size: 1.8rem;
+    }
+
+    @include break(400px) {
+      font-size: 1.4rem;
+    }
   }
   p {
     font-size: 1.1rem;

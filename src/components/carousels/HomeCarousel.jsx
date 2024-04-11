@@ -33,7 +33,7 @@ const HomeCarousel = ({ carouselData }) => {
               <section className="swiper_content">
                 <h1 className="main_heading">{item.title}</h1>
                 <p>{item.desc}</p>
-                <Button title={"Readmore"} bg={"--theme-color"} />
+                <Button title={"Read more"} bg={"--theme-color"} />
               </section>
             </section>
           </SwiperSlide>
