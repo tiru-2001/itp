@@ -1,12 +1,13 @@
+@import "../../globalscss/responsivemixins.scss";
+@import "../../globalscss/global.scss";
+
 .card_container {
   box-shadow: 0px 0px 21px 3px rgb(177, 174, 174);
   border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
+  @include flex(column, center, null, 15px);
   padding: 10px 15px;
   flex-basis: 20%;
+
   &:hover {
     box-shadow: 0px 0px 21px 3px #e47911;
   }
@@ -14,16 +15,27 @@
     border-radius: 50%;
     background-color: rgb(199, 226, 247);
     padding: 10px;
+
     img {
       border-radius: 50%;
+      @include break(300px) {
+        width: 150px !important;
+        height: 150px !important;
+      }
     }
   }
   h2 {
     color: rgb(29, 28, 28);
+    @include break(300px) {
+      text-align: left;
+    }
   }
   p {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     text-align: center;
     font-weight: 400;
+    @include break(300px) {
+      text-align: left;
+    }
   }
 }

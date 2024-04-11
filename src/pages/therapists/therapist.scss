@@ -1,0 +1,7 @@
+@import "../../globalscss//global.scss";
+@import "../../globalscss/responsivemixins.scss";
+.doctors_container {
+  @include flex(row, null, space-around, 0px);
+  flex-wrap: wrap;
+  margin-top: 100px;
+}

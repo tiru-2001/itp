@@ -1,65 +1,102 @@
 import "./navbar.scss";
-import { FaFacebookF } from "react-icons/fa6";
-import { FaTwitter } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { IoCall } from "react-icons/io5";
+import { useState } from "react";
+import {
+  IoCall,
+  FaFacebookF,
+  FaLinkedin,
+  FaInstagram,
+  FaTwitter,
+  CiMenuBurger,
+  MdCancel,
+} from "../../assets/icons/index";
+import { Link } from "react-router-dom";
+import logo from "../../assets/images/logo.jpg";
+import { navLinks } from "../../utils/navbarutils/index";
 const Navbar = () => {
+  const [toggle, setToggle] = useState(false);
   return (
     <div>
       <header>
-        <nav class="first-nav">
-          <section class="left">
-            <section class="left-item1">
+        <nav className="first-nav">
+          <section className="left">
+            <section className="left-item1">
               <IoCall />
               <a href="tel:9393939">123456789</a>
             </section>
-            <section class="left-item2">
-              <i class="fa-regular fa-envelope"></i>
+            <section className="left-item2">
+              <i className="fa-regular fa-envelope"></i>
               <a href="mailto:example@gmail.com">example@gmail.com</a>
             </section>
           </section>
-          <section class="right">
-            <section class="right-item1">
+          <section className="right">
+            <section className="right-item1">
               <FaFacebookF />
               <FaTwitter />
               <FaInstagram />
               <FaLinkedin />
             </section>
 
-            <a href="" class="right-item2">
+            <Link to="/contact" className="right-item2">
               Make an appointment
-            </a>
+            </Link>
           </section>
         </nav>
 
-        <section class="second-nav-container">
-          <nav class="second-nav">
-            <section class="logo">
-              <img src="https://gracethemesdemo.com/psyclone/wp-content/themes/psyclone-pro/images/logo.png" />
+        {/* desktop version */}
+        <section className="second-nav-container">
+          <nav className="second-nav">
+            <section className="logo">
+              <Link to={"/"}>
+                <img src={logo} />
+              </Link>
             </section>
-            <section class="nav-items">
-              <ul>
-                <li>
-                  <a href="">Home</a>
-                </li>
-                <li>
-                  <a href="">About us</a>
-                </li>
-                <li>
-                  <a href="">Templates</a>
-                </li>
-                <li>
-                  <a href="">Blog</a>
-                </li>
-                <li>
-                  <a href="">Gallery</a>
-                </li>
-
-                <li>
-                  <a href="">Contact us</a>
-                </li>
-              </ul>
+            <section className="nav-items">
+              {navLinks.map((item, ind) => (
+                <Link key={ind} to={item.path}>
+                  {item.title}
+                </Link>
+              ))}
+            </section>
+            <section className="mobile_version_nav">
+              {!toggle && (
+                <section className="menubtn_container">
+                  <CiMenuBurger
+                    className="menu_icon"
+                    onClick={() => {
+                      setToggle((prev) => !prev);
+                    }}
+                  />
+                </section>
+              )}
+              {/* {toggle} */}
+              {toggle && (
+                <section className="toggleContainer">
+                  {toggle && (
+                    <section className="cancelbutton_container">
+                      <MdCancel
+                        className="cancelButton"
+                        onClick={() => {
+                          setToggle((prev) => !prev);
+                        }}
+                      />
+                    </section>
+                  )}
+                  <section className="mobile_navitems_container">
+                    {navLinks.map((item, ind) => (
+                      <Link
+                        onClick={() => {
+                          setToggle((prev) => !prev);
+                        }}
+                        className="links"
+                        to={item.path}
+                        key={ind}
+                      >
+                        {item.title}
+                      </Link>
+                    ))}
+                  </section>
+                </section>
+              )}
             </section>
           </nav>
         </section>

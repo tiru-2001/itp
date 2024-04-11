@@ -5,4 +5,6 @@ export { default as RoundIcon } from "./roundIcon/RoundIcon";
 export { default as Button } from "./button/Button";
 export { default as Card } from "./card/Card";
 export { default as RightContent } from "./rightcontent/RightContent";
+export { default as DoctorCard } from "./doctorcards/DoctorCard";
+export { default as HomeCarousel } from "./carousels/HomeCarousel";
 export { default as Booking } from "./booking/Booking";

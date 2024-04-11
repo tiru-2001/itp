@@ -1,0 +1,174 @@
+@import "../../globalscss/global.scss";
+@import "../../globalscss/responsivemixins.scss";
+$background-main: #d39259;
+$text-color: #ffffff;
+$dark-brown: #4e2908;
+$copyright-brown: #2c1704;
+$icon-orange: #fa8245;
+$link-hover-orange: #b17744;
+
+footer {
+  background-color: $dark-brown;
+  color: $text-color;
+  padding: 20px 30px;
+
+  .container {
+    width: 100%;
+    margin-bottom: 25px;
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .flex {
+    display: flex;
+    @include break(700px) {
+      @include flex(column, null, null, 0px);
+    }
+
+    .flex-col {
+      flex-direction: column;
+    }
+
+    @include break(xs) {
+      flex-direction: column !important;
+    }
+    @include break(sm) {
+      flex-direction: row;
+    }
+
+    .flex-row {
+      flex-direction: row !important;
+    }
+    .gap-14 {
+      gap: 14px;
+    }
+    .wrap {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.justify-space-evenly {
+  justify-content: space-evenly;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.justify-space-around {
+  justify-content: space-around;
+}
+
+.col {
+  padding: 12px;
+  width: 25%;
+  @include break(800px) {
+    width: 100%;
+    max-width: 100% !important;
+  }
+}
+
+.header {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.sub-text {
+  line-height: 25px;
+  font-size: 0.8rem;
+  margin-bottom: 50px;
+}
+.contact-info {
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+  p {
+    font-size: 0.8rem;
+  }
+}
+
+.program-list {
+  font-size: 0.8rem;
+  ul {
+    li::before {
+      content: ">";
+      font-weight: bolder;
+      border-radius: 1ch;
+      padding-inline: 1ch;
+      margin-inline-end: 1ch;
+    }
+
+    li:hover {
+      color: $link-hover-orange;
+    }
+  }
+}
+
+.social {
+  flex-wrap: wrap;
+  width: 44px;
+  height: 44px;
+  background-color: $icon-orange;
+  border-radius: 5px;
+  text-align: center;
+  svg {
+    max-width: 25px;
+    // height: 25px;
+    margin: 32%;
+  }
+}
+
+.social:hover {
+  opacity: 50%;
+  transition: opacity 0.5s ease;
+}
+
+.dialnow {
+  background-color: #673a12;
+  padding: 0;
+  position: relative;
+  float: left;
+  width: 220px;
+  border-radius: 10px;
+  padding: 20px 20px;
+  @include break(900px) {
+    width: 200px;
+  }
+}
+
+.dialnow::before {
+  content: "";
+  height: 58px;
+  width: 58px;
+  line-height: 58px;
+  background: #e0a067 url(../../assets/images/telephone-fill.svg) no-repeat
+    center center;
+  margin: 0 15px 0 0;
+  padding: 0;
+  // display: inline-block;
+  border-radius: 100%;
+  text-align: center;
+  float: left;
+
+  @include break(sm) {
+    display: none;
+  }
+}
+
+.dialnow-number {
+  font-weight: 400;
+}
+
+.copyright {
+  width: 100%;
+  text-align: center;
+  background-color: $copyright-brown;
+  font-size: 0.8rem;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}

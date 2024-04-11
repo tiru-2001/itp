@@ -1,4 +1,5 @@
 import "./card.scss";
+
 const Card = ({ data: { img, title, desc, height, width, section } }) => {
   console.log(img, title, desc, height, width);
 
