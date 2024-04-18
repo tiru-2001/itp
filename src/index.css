@@ -4,17 +4,18 @@
   box-sizing: border-box;
 }
 :root {
-  --theme-color: #d39259;
-  --color1: #ba7c46;
+  --theme-color: #95a37f;
+  --color1: #646e57;
   --main-heading-color: rgb(48, 48, 48);
-  --button-bg: rgb(243, 127, 68);
-  --icon-bg: rgb(197, 128, 80);
+  --button-bg: #b6ad90;
+  --icon-bg: #333d29;
   --gray: rgb(72, 74, 78);
-  --doctorpage-theme: rgb(248, 158, 68);
+  --doctorpage-theme: #414833;
   --doctorpage-btn: rgb(38, 198, 142);
   --flower-bg: rosybrown;
   --color2: rgb(66, 54, 28);
   --color3: rgb(163, 91, 91);
+  --card_hover: rgb(105, 201, 78);
 }
 html {
   scroll-behavior: smooth;

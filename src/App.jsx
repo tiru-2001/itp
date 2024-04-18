@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import {
   Login,
@@ -9,7 +9,7 @@ import {
   Home,
   Register,
   Private,
-  Booking,
+  Appointment,
   Therapist,
   Dietician,
   Contact,
@@ -26,7 +26,7 @@ const App = () => {
           <Route path="/" element={<Parent />}>
             <Route index element={<Home />} />
             <Route path="private/*" element={<Private />}>
-              <Route path="booking" element={<Booking />} />
+              <Route path="booking" element={<Appointment />} />
             </Route>
             <Route path="login" element={<Login />} />
             <Route path="top-therapists" element={<Therapist />} />
@@ -37,9 +37,9 @@ const App = () => {
             <Route path="register" element={<Register />} />
             <Route path="eap" element={<Eap />} />
           </Route>
-         
         </Routes>
       </Router>
+      <ToastContainer />
     </>
   );
 };

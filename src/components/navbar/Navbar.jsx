@@ -1,5 +1,5 @@
 import "./navbar.scss";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import {
   IoCall,
   FaFacebookF,
@@ -12,8 +12,14 @@ import {
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.jpg";
 import { navLinks } from "../../utils/navbarutils/index";
+import { usestate } from "../../statemanagement/UseAuth";
 const Navbar = () => {
+  const { user, setUser } = useContext(usestate);
   const [toggle, setToggle] = useState(false);
+  const logout = () => {
+    localStorage.removeItem("user");
+    setUser("");
+  };
   return (
     <div>
       <header>
@@ -56,6 +62,21 @@ const Navbar = () => {
                   {item.title}
                 </Link>
               ))}
+              {user ? (
+                <>
+                  <h6
+                    style={{ color: "red", cursor: "pointer" }}
+                    onClick={logout}
+                  >
+                    logout
+                  </h6>
+                  <h5 style={{ color: "green", cursor: "pointer" }}>
+                    Hi! {user}
+                  </h5>
+                </>
+              ) : (
+                <Link to={"/login"}>Login</Link>
+              )}
             </section>
             <section className="mobile_version_nav">
               {!toggle && (
@@ -94,6 +115,21 @@ const Navbar = () => {
                         {item.title}
                       </Link>
                     ))}
+                    {user ? (
+                      <>
+                        <h6
+                          style={{ color: "red", cursor: "pointer" }}
+                          onClick={logout}
+                        >
+                          logout
+                        </h6>
+                        <h5 style={{ color: "green", cursor: "pointer" }}>
+                          Hi! {user}
+                        </h5>
+                      </>
+                    ) : (
+                      <Link to={"/login"}>Login</Link>
+                    )}
                   </section>
                 </section>
               )}

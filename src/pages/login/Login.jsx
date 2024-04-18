@@ -1,11 +1,45 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import "./login.scss";
+import { toast } from "react-toastify";
+import configuredUrl from "../../utils/request/request";
+import { useNavigate } from "react-router-dom";
+import { usestate } from "../../statemanagement/UseAuth";
+import { useLocation } from "react-router-dom";
 const Login = () => {
+  const location = useLocation();
+  const { setUser } = useContext(usestate);
+  const navigate = useNavigate();
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [error, setError] = useState(null);
-  const handleLogin = () => {};
+
+  const handleLogin = async () => {
+    try {
+      const { data } = await configuredUrl.post("/auth/login", {
+        password,
+        email,
+      });
+      console.log(data);
+      if (data.success) {
+        toast.success(data.message);
+        localStorage.setItem("user", data.user);
+        setUser(localStorage.getItem("user"));
+        navigate("/");
+        // if (location.state && location.state.from) {
+        //   // Redirect to the previous page
+        //   navigate(location.state.from);
+        // } else {
+        //   // If no state or no 'from' in state, redirect to home page
+        //   navigate("/");
+        // }
+      }
+    } catch (e) {
+      console.log(e);
+      setError(e.response.data.message);
+      toast.error(e.response.data.message);
+    }
+  };
   return (
     <section>
       <section className="app__login-container">
@@ -28,6 +62,7 @@ const Login = () => {
               <section className="app__form">
                 <form className="form-container">
                   <input
+                    required
                     type="email"
                     value={email}
                     onChange={(e) => {
@@ -36,6 +71,7 @@ const Login = () => {
                     placeholder="Enter your email"
                   />
                   <input
+                    required
                     value={password}
                     onChange={(e) => {
                       setPassword(e.target.value);
