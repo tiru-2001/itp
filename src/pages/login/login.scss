@@ -1,0 +1,114 @@
+@import "../../globalscss/global.scss";
+@import "../../globalscss/responsivemixins.scss";
+
+.app__login-container {
+  min-height: 100vh;
+  background: url("https://images.unsplash.com/photo-1689108126187-407e71af7e50?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjY4fHx3aGl0ZSUyMCUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D")
+    center center / cover no-repeat;
+  @include flex(row, center, center, 0px);
+  .app__login-subcontainer {
+    margin: 20px 0px;
+    box-shadow: 0px 0px 20px rgba(120, 120, 120, 0.5);
+    height: 500px;
+    width: 60%;
+    display: flex;
+    @include break(1000px) {
+      width: 80%;
+    }
+    @include break(740px) {
+      width: 90%;
+    }
+    @include break(600px) {
+      margin-top: 100px;
+    }
+    @include break(600px) {
+      @include flex(column, null, null, 0px);
+      height: max-content;
+      padding: 10px;
+    }
+    .left {
+      background: url("../../assets/images/signBg.jpg") center/cover no-repeat;
+      backdrop-filter: blur(20px);
+      padding: 10px 30px;
+      @include flex(row, center, null, 0px);
+      @include break(600px) {
+        flex: 1;
+      }
+      .title-container {
+        h1 {
+          color: var(--color2);
+          text-align: start;
+          @include break(350px) {
+            font-size: 2rem;
+          }
+        }
+        p {
+          padding: 10px 0px;
+          color: var(--color3);
+          font-size: 1.5rem;
+          font-weight: 500;
+          @include break(350px) {
+            font-size: 1.3rem;
+            text-align: start;
+          }
+        }
+      }
+    }
+    .right {
+      @include flex(row, center, space-around, 0px);
+      .app__right-subContainer {
+        padding: 10px 20px;
+        @include flex(column, null, null, 30px);
+        .app__sign-title {
+          @include flex(column, null, null, 18px);
+          h1 {
+            font-weight: bold;
+            font-size: 2.5rem;
+            color: var(--gray);
+            @include break(350px) {
+              font-size: 1.8rem;
+            }
+          }
+          p {
+            font-weight: 400;
+            font-size: 1.2rem;
+            color: var(--doctorpage-theme);
+          }
+        }
+        .app__form {
+          .form-container {
+            @include flex(column, null, null, 20px);
+            input {
+              padding: 10px 5px;
+              border: none;
+              border-bottom: 1px solid var(--gray);
+              font-size: 1rem;
+              background-color: transparent;
+              &:focus {
+                outline: 1px solid var(--gray);
+                border: none;
+              }
+              @include break(290px) {
+                width: 100%;
+              }
+            }
+          }
+        }
+        .btn-container {
+          @include flex(row, center, center, 0px);
+          .btn {
+            font-size: 1.2rem;
+            padding: 10px 30px;
+            border-radius: 30px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            background-color: rgb(35, 65, 108);
+            color: white;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
