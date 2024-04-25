@@ -11,14 +11,9 @@
 
   // section3 stars
   .section3_container {
-<<<<<<< HEAD
     padding: 120px 0px;
     @include flex(column, center, null, 60px);
     background-color: var(--color5);
-=======
-    margin: 120px 0px;
-    @include flex(column, center, null, 60px);
->>>>>>> 0879892d63fa5b732f63e4269a65f3ff971664b1
 
     @include break(600px) {
       h1 {
@@ -51,12 +46,8 @@
 
   // section5 starts
   .section5_container {
-<<<<<<< HEAD
     padding: 150px 0px;
     background-color: var(--color4);
-=======
-    margin: 200px 0px;
->>>>>>> 0879892d63fa5b732f63e4269a65f3ff971664b1
     @include flex(column, center, null, 100px);
 
     @include break(600px) {
@@ -105,30 +96,18 @@
     background: url("https://img.freepik.com/free-photo/copy-space-paper-flowers-ornaments_23-2148480110.jpg?w=996")
       center/cover no-repeat fixed;
     position: relative;
-<<<<<<< HEAD
     padding: 80px 0px;
     @include flex(row, center, space-between, null);
-=======
-    margin: 100px 0px;
-    @include flex(row, center, space-between, null);
-    height: 70vh;
-
->>>>>>> 0879892d63fa5b732f63e4269a65f3ff971664b1
     @include break(650px) {
       @include flex(column, center, null, null);
       height: 120vh;
     }
 
     @include break(450px) {
-<<<<<<< HEAD
-=======
-      // @include flex(column, center, space-between, null);
->>>>>>> 0879892d63fa5b732f63e4269a65f3ff971664b1
       height: 130vh;
     }
 
     .left {
-<<<<<<< HEAD
       flex: 1;
       @include flex(row, center, center, 30px);
       @include break(1000px) {
@@ -136,17 +115,6 @@
 
       .left_content {
         padding: 50px;
-=======
-      flex-basis: 70%;
-      @include flex(row, center, center, 30px);
-      @include break(1000px) {
-        flex-basis: 60%;
-      }
-
-      .left_content {
-        padding: 10px 0px;
-        width: 70%;
->>>>>>> 0879892d63fa5b732f63e4269a65f3ff971664b1
         @include flex(column, null, null, 30px);
 
         @include break(1000px) {
@@ -202,7 +170,6 @@
       }
     }
 
-<<<<<<< HEAD
     .img_container {
       flex: 1;
       img {
@@ -218,52 +185,14 @@
         @include break(300px) {
           height: 300px;
         }
-=======
-    img {
-      object-fit: cover;
-      position: absolute;
-      bottom: 0px;
-      right: 60px;
-      height: 650px;
-
-      @include break(1000px) {
-        height: 600px;
-        right: 20px;
-      }
-
-      @include break(760px) {
-        height: 550px;
-        right: -30px;
-      }
-      @include break(650px) {
-        height: 450px;
-        left: 70px;
-      }
-
-      @include break(450px) {
-        height: 500px;
-        left: 30px;
-      }
-      @include break(350px) {
-        height: 400px;
-        left: 20px;
-      }
-
-      @include break(300px) {
-        height: 300px;
-        left: 20px;
->>>>>>> 0879892d63fa5b732f63e4269a65f3ff971664b1
       }
     }
   }
 
   // section10
   .section10_container {
-<<<<<<< HEAD
     background-color: var(--color5);
 
-=======
->>>>>>> 0879892d63fa5b732f63e4269a65f3ff971664b1
     @include flex(row, center, center, 10px);
     height: 90vh;
     padding: 10px 30px;

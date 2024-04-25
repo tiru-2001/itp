@@ -2,10 +2,7 @@
 @import "../../globalscss/global.scss";
 
 .card_container {
-<<<<<<< HEAD
   background-color: white;
-=======
->>>>>>> 0879892d63fa5b732f63e4269a65f3ff971664b1
   box-shadow: 0px 0px 21px 3px rgb(177, 174, 174);
   border-radius: 15px;
   @include flex(column, center, null, 15px);
