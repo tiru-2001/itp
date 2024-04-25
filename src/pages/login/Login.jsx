@@ -1,5 +1,9 @@
 import { useContext, useState } from "react";
+<<<<<<< HEAD
 import { Link, json } from "react-router-dom";
+=======
+import { Link } from "react-router-dom";
+>>>>>>> 0879892d63fa5b732f63e4269a65f3ff971664b1
 import "./login.scss";
 import { toast } from "react-toastify";
 import configuredUrl from "../../utils/request/request";
@@ -22,6 +26,7 @@ const Login = () => {
       });
       console.log(data);
       if (data.success) {
+<<<<<<< HEAD
         toast.success("user successfully logged in you can book therapist");
         localStorage.setItem(
           "user",
@@ -35,6 +40,19 @@ const Login = () => {
         } else {
           navigate("/");
         }
+=======
+        toast.success(data.message);
+        localStorage.setItem("user", data.user);
+        setUser(localStorage.getItem("user"));
+        navigate("/");
+        // if (location.state && location.state.from) {
+        //   // Redirect to the previous page
+        //   navigate(location.state.from);
+        // } else {
+        //   // If no state or no 'from' in state, redirect to home page
+        //   navigate("/");
+        // }
+>>>>>>> 0879892d63fa5b732f63e4269a65f3ff971664b1
       }
     } catch (e) {
       console.log(e);
@@ -42,8 +60,11 @@ const Login = () => {
       toast.error(e.response.data.message);
     }
   };
+<<<<<<< HEAD
   console.log(localStorage.getItem("user"));
   console.log(JSON.parse(localStorage.getItem("user")));
+=======
+>>>>>>> 0879892d63fa5b732f63e4269a65f3ff971664b1
   return (
     <section>
       <section className="app__login-container">
@@ -70,7 +91,10 @@ const Login = () => {
                     type="email"
                     value={email}
                     onChange={(e) => {
+<<<<<<< HEAD
                       console.log(e.target.value);
+=======
+>>>>>>> 0879892d63fa5b732f63e4269a65f3ff971664b1
                       setEmail(e.target.value);
                     }}
                     placeholder="Enter your email"

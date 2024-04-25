@@ -8,7 +8,11 @@ $icon-orange: #fa8245;
 $link-hover-orange: #b17744;
 
 footer {
+<<<<<<< HEAD
   background-color: var(--icon-bg);
+=======
+  background-color: $dark-brown;
+>>>>>>> 0879892d63fa5b732f63e4269a65f3ff971664b1
   color: $text-color;
   padding: 20px 30px;
 
@@ -110,7 +114,11 @@ footer {
   flex-wrap: wrap;
   width: 44px;
   height: 44px;
+<<<<<<< HEAD
   background-color: var(--color1);
+=======
+  background-color: $icon-orange;
+>>>>>>> 0879892d63fa5b732f63e4269a65f3ff971664b1
   border-radius: 5px;
   text-align: center;
   svg {
@@ -126,11 +134,19 @@ footer {
 }
 
 .dialnow {
+<<<<<<< HEAD
   background-color: var(--color1);
   padding: 0;
   position: relative;
   float: left;
   width: 260px;
+=======
+  background-color: #673a12;
+  padding: 0;
+  position: relative;
+  float: left;
+  width: 220px;
+>>>>>>> 0879892d63fa5b732f63e4269a65f3ff971664b1
   border-radius: 10px;
   padding: 20px 20px;
   @include break(900px) {
@@ -143,8 +159,13 @@ footer {
   height: 58px;
   width: 58px;
   line-height: 58px;
+<<<<<<< HEAD
   background: var(--theme-color) url(../../assets/images/telephone-fill.svg)
     no-repeat center center;
+=======
+  background: #e0a067 url(../../assets/images/telephone-fill.svg) no-repeat
+    center center;
+>>>>>>> 0879892d63fa5b732f63e4269a65f3ff971664b1
   margin: 0 15px 0 0;
   padding: 0;
   // display: inline-block;
@@ -164,14 +185,23 @@ footer {
 .copyright {
   width: 100%;
   text-align: center;
+<<<<<<< HEAD
   background-color: var(--color1);
+=======
+  background-color: $copyright-brown;
+>>>>>>> 0879892d63fa5b732f63e4269a65f3ff971664b1
   font-size: 0.8rem;
   padding: 30px;
   border-radius: 10px;
   max-width: 1170px;
+<<<<<<< HEAD
   margin: 0 auto;
   @include flex(column, center, center, 0px);
   .developed {
     align-self: end;
   }
+=======
+  margin-left: auto;
+  margin-right: auto;
+>>>>>>> 0879892d63fa5b732f63e4269a65f3ff971664b1
 }
