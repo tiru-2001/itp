@@ -18,6 +18,7 @@ import blog02 from "../../assets/images/blog02.jpg";
 import blog03 from "../../assets/images/blog03.jpg";
 import Newscard from "../../components/newscard/Newscard";
 import { psychiatrist } from "../../utils/booking";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -122,7 +123,9 @@ const Home = () => {
             are Support 24/7 ”
           </h3>
           <section className="right_bottom_container">
-            <Button title={"contact us"} bg={"--button-bg"} />
+            <Link to="/contact-us"   >
+            <Button title={"contact us"} bg={"--button-bg"}  />
+            </Link>
             <section className="contact_details">
               <RoundIcon icn={<FaPhoneAlt />} bg={" --icon-bg"} />
               <section className="contact_content">
@@ -172,10 +175,10 @@ const Home = () => {
         <div className="heading15">
           <div className="main_title">
             <div className="title">WORK PROCESS</div>
-            <div className="subtitle_large">Our Working Process</div>
+            <div className="subtitle_large">Our Approach</div>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim
-              porro esse laudantium delectus sed autem.
+            At Our Therapy Clinic, we prioritize personalized care and effective solutions,
+             guiding individuals towards holistic well-being with compassion and expertise.
             </p>
           </div>
         </div>
@@ -198,7 +201,7 @@ const Home = () => {
 
             <div className="work-title">Make Schedule</div>
             <div className="work-desc">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Easily schedule your therapy sessions online, at your convenience.
             </div>
           </div>
           <div className="single_diagram">
@@ -219,7 +222,7 @@ const Home = () => {
 
             <div className="work-title">Start Discussion</div>
             <div className="work-desc">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Engage in meaningful conversations with our experienced therapists.
             </div>
           </div>
           <div className="single_diagram">
@@ -240,7 +243,7 @@ const Home = () => {
 
             <div className="work-title">Enjoy Plan</div>
             <div className="work-desc">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Explore personalized therapy plans tailored to your needs.
             </div>
           </div>
         </div>

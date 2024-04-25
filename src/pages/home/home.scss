@@ -13,7 +13,7 @@
   .section3_container {
     padding: 120px 0px;
     @include flex(column, center, null, 60px);
-    background-color: var(--color5);
+    background-color: var(--lightgreenbg);
 
     @include break(600px) {
       h1 {
@@ -191,7 +191,7 @@
 
   // section10
   .section10_container {
-    background-color: var(--color5);
+    background-color: var(--lightgreenbg);
 
     @include flex(row, center, center, 10px);
     height: 90vh;
@@ -217,7 +217,7 @@
         @include flex(row, center, center, 0px);
         padding: 10px;
         border-radius: 50%;
-        background-color: white;
+        background-color: var(--white);
         position: absolute;
         top: -40px;
         left: 100px;
@@ -288,7 +288,7 @@
     .left {
       flex-basis: 40%;
       padding: 0 30px;
-      color: white;
+      color: var(--white);
       @include flex(column, null, center, 30px);
       @include break(600px) {
         h2 {
@@ -316,7 +316,7 @@
           flex-basis: 35%;
           @include flex(column, center, center, 0px);
           h1 {
-            color: white;
+            color: var(--white);
             @include break(600px) {
               font-size: 2.2rem;
             }
@@ -324,7 +324,7 @@
 
           p {
             padding: 10px 0px;
-            color: yellow;
+            color: var(--yellow);
             font-size: 1.1rem;
           }
         }
@@ -380,7 +380,7 @@
   display: flex;
   width: 80%;
   margin: 50px auto;
-  box-shadow: 0px 0px 13px -3px gray;
+  box-shadow: 0px 0px 13px -3px var(--gray);
   gap: 20px;
   @include break(600px) {
     // font-size: 1.8rem;
@@ -432,7 +432,7 @@
           font-weight: 600;
 
           p {
-            color: brown;
+            color: var(--redbrown);
           }
         }
       }
@@ -452,7 +452,7 @@
     .title {
       font-size: 1.15rem;
       font-weight: 600;
-      color: #d39259;
+      color: var(--title);
       margin-bottom: 5px;
     }
 
@@ -485,14 +485,13 @@
   @include flex(column, center, null, 0px);
   padding: 3.5rem 0;
   text-align: center;
-  background-color: #f1f4f6;
-
+  background-color:var( --lightbeigebg);
   .heading15 {
     .main_title {
       .title {
         font-size: 1.15rem;
         font-weight: 600;
-        color: #d39259;
+        color: var(--title);
         margin-bottom: 5px;
       }
 
@@ -517,7 +516,7 @@
     }
 
     .work-process {
-      background-color: #f1f4f6;
+      background-color: var(--lightbeigebg);
       padding: 90px 0;
     }
 
@@ -527,21 +526,21 @@
       width: 170px !important;
       height: 170px;
       border-radius: 50%;
-      background-color: #d39259;
+      background-color: var(--title);
       transition: all ease 0.8s;
     }
 
     .work-thumb:hover {
-      background-color: #4e2908;
+      background-color: var(--color2);
       transition: all 0.8s ease-out;
       .work-number {
-        background-color: #d39259;
+        background-color: var(--title);
         transition: all 0.8s ease;
       }
     }
 
     .work-thumb svg {
-      color: white;
+      color: var(--white);
       position: relative;
       width: 70px;
       height: 70px;
@@ -551,14 +550,14 @@
     .work-number {
       position: relative;
       font-size: 28px;
-      background-color: #4e2908;
-      color: white;
+      background-color: var(--color2);
+      color: var(--white);
       border-radius: 50%;
       width: 58px;
       height: 58px;
       justify-content: end;
       margin-left: 100px;
-      border: 7px white solid;
+      border: 7px var(--white) solid;
     }
 
     .work-title {
