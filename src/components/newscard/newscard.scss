@@ -9,7 +9,7 @@
   box-shadow: 0 0 40px rgb(0 0 0 / 10%);
 
   .img {
-    background-color: black;
+    background-color: var(--black);
     overflow: hidden;
     height: 90%;
 
@@ -32,7 +32,7 @@
   .card-date {
     width: 3.5rem;
     background-color: var(--theme-color);
-    color: white;
+    color: var(--white);
     border-radius: 50%;
     padding: 8px;
     position: relative;
@@ -51,7 +51,7 @@
     text-align: left;
 
     a {
-      color: #d39259;
+      color: var(--title);
       font-weight: 500;
     }
 
@@ -60,7 +60,7 @@
     }
 
     a:hover {
-      color: black;
+      color: var(--black);
     }
   }
   .card_title {

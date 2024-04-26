@@ -7,7 +7,7 @@
   --theme-color: #95a37f;
   --color1: #646e57;
   --main-heading-color: rgb(48, 48, 48);
-  --button-bg: #b6ad90;
+  --button-bg: #646e57;
   --icon-bg: #333d29;
   --gray: rgb(72, 74, 78);
   --doctorpage-theme: #414833;
@@ -15,9 +15,16 @@
   --flower-bg: rosybrown;
   --color2: rgb(66, 54, 28);
   --color3: rgb(163, 91, 91);
-  --card_hover: rgb(105, 201, 78);
+  --card_hover: rgb(96, 134, 114);
   --color4: rgb(246, 208, 190);
-  --color5: rgb(210, 238, 192);
+  --lightgreenbg: rgb(222, 240, 211);
+  --blue-heading: rgb(28, 28, 81);
+  --lightbeigebg: rgb(241, 246, 224);
+  --redbrown: brown;
+  --title:#d39259;
+  --white: white;
+  --yellow: yellow;
+  --black: black;
 }
 html {
   scroll-behavior: smooth;

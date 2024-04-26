@@ -2,7 +2,7 @@
 @import "../../globalscss/global.scss";
 
 .card_container {
-  background-color: white;
+  background-color: var(--white);
   box-shadow: 0px 0px 21px 3px rgb(177, 174, 174);
   border-radius: 15px;
   @include flex(column, center, null, 15px);
@@ -14,7 +14,7 @@
   }
   .img_section {
     border-radius: 50%;
-    background-color: rgb(199, 226, 247);
+    background-color:var(--theme-color);
     padding: 10px;
 
     img {

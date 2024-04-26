@@ -22,7 +22,7 @@
           text-align: start;
           font-weight: 500;
           font-size: 23px;
-          color: rgb(32, 32, 52);
+          color: var(--blue-heading);
           @include break(350px) {
             font-size: 1.4rem;
           }
@@ -31,7 +31,7 @@
           text-align: start;
           font-weight: 400;
           font-size: 33px;
-          color: rgb(47, 47, 90);
+          color: var(--blue-heading);
           @include break(350px) {
             font-size: 1.8rem;
           }
@@ -42,7 +42,7 @@
           text-align: start;
           font-weight: 600;
           font-size: 18px;
-          color: rgb(84, 50, 4);
+          color: var(--blue-heading);
         }
         p {
           text-align: start;
@@ -52,13 +52,14 @@
             line-height: 25px;
           }
         }
+       
       }
     }
     // section1_right
     .right {
       @include flex(column, null, null, 20px);
       padding: 10px 20px;
-      background-color: rgb(247, 246, 218);
+      background-color: var(--lightgreenbg);
       flex: 1;
 
       @media screen and (max-width: 400px) {
@@ -73,8 +74,8 @@
           font-weight: 500;
           font-size: 25px;
         }
-        h3 {
-          color: rgb(84, 50, 4);
+        h3,h1 {
+          color:var(--blue-heading);
         }
       }
       .right_desc {
@@ -90,14 +91,14 @@
         text-align: center;
         font-weight: 600;
         font-size: 18px;
-        color: rgb(84, 50, 4);
+        color: var(--blue-heading);
       }
       .visit_link {
-        background-color: rgb(246, 183, 106);
+        background-color: var(--button-bg);
         padding: 10px;
         p {
           text-align: center;
-          color: white;
+          color: var(--white);
           font-weight: 500;
           font-size: medium;
         }
@@ -110,8 +111,8 @@
   .section3_container {
     display: flex;
     padding: 20px 40px;
-
-    @include break(900px) {
+    background-color: var(--lightbeigebg);
+      @include break(900px) {
       @include flex(column, center, null, 20px);
     }
     // left side
@@ -123,7 +124,7 @@
           text-align: start;
           font-weight: 500;
           font-size: 35px;
-          color: rgb(84, 50, 4);
+          color: var(--blue-heading);
           @include break(350px) {
             font-size: 1.8rem;
           }
@@ -131,7 +132,7 @@
         .left_desc {
           margin: 20px 0;
           .custom_list {
-            color: rgb(172, 120, 46);
+            color: var(--blue-heading);
             font-size: 15px;
             line-height: 30px;
             @include break(350px) {
@@ -142,7 +143,7 @@
       }
       .callback-button {
         button {
-          background-color: var(--flower-bg);
+          background-color: var(--button-bg);
         }
       }
     }
@@ -194,7 +195,6 @@
   // section5
   .section5_container {
     position: relative; /* Ensure the container is positioned relatively */
-    margin: 80px 0;
     background: url("https://images.unsplash.com/photo-1528458909336-e7a0adfed0a5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGElMjBiYWNrZ3JvdW5kJTIwaW1hZ2UlMjBibHVpc2h8ZW58MHwwfDB8fHww")
       center/cover;
 
@@ -204,7 +204,7 @@
       text-align: center;
       font-size: 33px;
       font-weight: 500;
-      color: rgb(84, 50, 4);
+      color: var(--blue-heading);
       margin: 50px 0;
     }
     .service-btn {
@@ -242,6 +242,7 @@
   // multip components
 
   .eap_multi_compo {
+    background-color: var(--lightbeigebg);
     padding: 10px 20px;
     @include flex(column, null, null, 150px);
     @include break(400px) {
