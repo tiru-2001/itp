@@ -1,6 +1,8 @@
 import "./eap.scss";
 import { section1_utils, eap_features } from "../../utils/eaputils";
 import Section1 from "../../components/eapcomponents/Section1";
+import { Link } from "react-router-dom";
+
 export default function Eap() {
   return (
     <section className="eap_container">
@@ -30,8 +32,10 @@ export default function Eap() {
             </p>
           </section>
           <section className="contact-button">
-            <button type="button">Contact Now </button>
-          </section>
+            <Link to ="/contact-us"> 
+            <button >Contact us </button> 
+            </Link>
+           </section>
         </section>
         <section className="right">
           <section className="right_top_content_left">
@@ -73,7 +77,9 @@ export default function Eap() {
             </section>
           </section>
           <section className="callback-button">
-            <button type="button"> Request Call Back </button>
+          <Link to="/contact-us">
+        <button >Request Call Back</button>
+      </Link>
           </section>
         </section>
         {/* section3 right side */}
