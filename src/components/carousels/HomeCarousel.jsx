@@ -10,7 +10,7 @@ import "./homeCarousel.scss";
 import { Link } from "react-router-dom";
 // import required modules
 import { EffectFlip, Pagination, Navigation, Autoplay } from "swiper/modules";
-import Button from "../button/Button";
+// import Button from "../button/Button";
 
 const HomeCarousel = ({ carouselData }) => {
   return (
@@ -34,11 +34,7 @@ const HomeCarousel = ({ carouselData }) => {
               <section className="swiper_content">
                 <h1 className="main_heading">{item.title}</h1>
                 <p>{item.desc}</p>
-                <Link
-                  title={"Read more"}
-                  to="/top-therapists"
-                  bg={"--theme-color"}
-                >
+                <Link className="link" title={"Read more"} to="/top-therapists">
                   Read more
                 </Link>
               </section>

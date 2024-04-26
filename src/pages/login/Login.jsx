@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link, json } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./login.scss";
 import { toast } from "react-toastify";
 import configuredUrl from "../../utils/request/request";
@@ -50,8 +50,14 @@ const Login = () => {
         <section className="app__login-subcontainer">
           <section className="left">
             <section className="title-container">
-              <h1 className="main_heading">Welcome back !</h1>
-              <p>You can sign in to access with your existing profile</p>
+              <h2 className="sub_heading">
+                Unlock Your World: Sign in to Access Your Profile
+              </h2>
+              <p>
+                Get ready to dive back into your personalized experience. Sign
+                in now to unlock exclusive features tailored just for you. Your
+                profile awaits!
+              </p>
             </section>
           </section>
           <section className="right">
@@ -89,7 +95,7 @@ const Login = () => {
 
               <section className="btn-container">
                 <button onClick={handleLogin} className="btn">
-                  log In
+                  Sign In
                 </button>
               </section>
               <Link
@@ -100,7 +106,7 @@ const Login = () => {
                   fontWeight: "400",
                 }}
               >
-                If you are not registered then click the link below to register
+                If not registered, click below to sign up
               </Link>
               {error && <section style={{ color: "red" }}>{error}</section>}
             </section>

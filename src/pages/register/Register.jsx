@@ -108,22 +108,17 @@ const Register = () => {
                 />
 
                 {error && <section style={{ color: "red" }}>{error}</section>}
-                <Link to={"/login"}>
-                  if you already registered then click to login
+                <Link
+                  style={{ textDecoration: "underline", color: "dodgerblue" }}
+                  to={"/login"}
+                >
+                  if you already registered then click to sign in
                 </Link>
 
                 <section className="btn_container">
                   <button type="submit" className="btn">
                     Sign Up
                   </button>
-
-                  <a
-                    href="https://buy.stripe.com/test_6oE9CD8gVahp9gs4gh"
-                    className="subscribe btn"
-                    target="_blank"
-                  >
-                    Subscribe
-                  </a>
                 </section>
               </form>
             </section>
@@ -131,8 +126,10 @@ const Register = () => {
         </section>
         <section className="right">
           <section className="title-container">
-            <h1 className="main_heading">Hello & Welcome!</h1>
-            <p>Service Recommendation System!</p>
+            <h1 className="main_heading">
+              Elevate Your Experience: Register Today!
+            </h1>
+            <p>Start your journey with us by registering for access today.</p>
           </section>
         </section>
       </section>

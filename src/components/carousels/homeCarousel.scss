@@ -79,5 +79,8 @@
         width: 100%;
       }
     }
+    .link {
+      @include button(var(--doctorpage-btn), black);
+    }
   }
 }

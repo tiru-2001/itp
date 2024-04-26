@@ -17,12 +17,8 @@ function Footer() {
       <footer>
         <section className="container flex gap-14">
           <section className="col">
-            <section className="header">Indian Therapy</section>
-            <section className="sub-text mb-10">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum,
-              facilis ad? Sapiente consequatur at, commodi necessitatibus veniam
-              mollitia nostrum corrupti.
-            </section>
+            <section className="header">IndianTherapist</section>
+            <section className="sub-text mb-10"></section>
 
             <section className="flex flex-row gap-14 wrap">
               <section className="social">
@@ -55,8 +51,15 @@ function Footer() {
               23 West Street, REDHILL, RH70 9WM
             </section>
             <section className="contact-info flex flex-col">
-              <p>Phone: +919384838353</p>
-              <p>Mail: customerservice@indiatherapist.com</p>
+              <p>
+                Phone: <a href="tel:+919384838353">+919384838353</a>
+              </p>
+              <p>
+                Mail:{" "}
+                <a href="mailto:customerservice@indiatherapist.com">
+                  customerservice@indiatherapist.com
+                </a>
+              </p>
             </section>
             <section className="contact-info">
               <p>Mon - Fri: ( 9am - 6pm )</p>
@@ -95,7 +98,11 @@ function Footer() {
               <section className="container-fluid">
                 <section className="col dialnow">
                   <p>Let's Chat</p>
-                  <section className="dialnow-number">+919384838353</section>
+                  <section className="dialnow-number">
+                    <a href="https://api.whatsapp.com/send?phone=919384838353">
+                      +919384838353
+                    </a>
+                  </section>
                 </section>
               </section>
             </Link>

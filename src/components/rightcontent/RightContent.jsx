@@ -8,6 +8,7 @@ import {
 
 import { CounselingItems } from "../index";
 import { Button } from "../index";
+import { Link } from "react-router-dom";
 const RightContent = ({ subtitle, title, desc, content_items, btn_text }) => {
   const icon = [
     <ImManWoman />,
@@ -33,7 +34,9 @@ const RightContent = ({ subtitle, title, desc, content_items, btn_text }) => {
             />
           ))}
         </section>
-        <Button title={btn_text} bg={"--button-bg"} />
+        <Link to="/top-therapists">
+          <Button title={btn_text} bg={"--button-bg"} />
+        </Link>
       </section>
     </>
   );

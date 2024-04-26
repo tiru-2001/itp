@@ -27,7 +27,7 @@ const Navbar = () => {
           <section className="left">
             <section className="left-item1">
               <IoCall />
-              <a href="tel:+919384838353">+919384838353</a>
+              <a href="customerservice@indiatherapist.com">+919384838353</a>
             </section>
             <section className="left-item2">
               <i className="fa-regular fa-envelope"></i>

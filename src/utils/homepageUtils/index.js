@@ -81,8 +81,8 @@ const right_content1 = {
     },
     {
       icon: "",
-      title: "Individual Counseling",
-      desc: "Mental help for families",
+      title: "Depression and Loneliness",
+      desc: "Overcome DEpression and Loneliness to lead a happy life",
     },
     {
       icon: "",

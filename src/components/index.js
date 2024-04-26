@@ -7,5 +7,5 @@ export { default as Card } from "./card/Card";
 export { default as RightContent } from "./rightcontent/RightContent";
 export { default as DoctorCard } from "./doctorcards/DoctorCard";
 export { default as HomeCarousel } from "./carousels/HomeCarousel";
-export { default as Booking } from "./booking/Booking";
+export { default as Category } from "./categoryselct/Category";
 export { default as Addbtn } from "./admin/addbtns/Addbtn";

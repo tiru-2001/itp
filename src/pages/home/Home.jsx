@@ -5,7 +5,7 @@ import {
   right_content1,
   homeCarouselData,
 } from "../../utils/homepageUtils";
-import { FaPhoneAlt, IoVideocam } from "../../assets/icons/index";
+import { FaPhoneAlt } from "../../assets/icons/index";
 import {
   Button,
   Card,
@@ -18,6 +18,7 @@ import blog02 from "../../assets/images/blog02.jpg";
 import blog03 from "../../assets/images/blog03.jpg";
 import Newscard from "../../components/newscard/Newscard";
 import { psychiatrist } from "../../utils/booking";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -48,11 +49,11 @@ const Home = () => {
           <section className="left_content">
             <section className="left_heading">
               <h1 className="main_heading">Hello,</h1>
-              <h5>Expert Clinical Psychologist</h5>
+              <h5>Indian Marriage Counseling</h5>
             </section>
             <section className="left_desc">
               <p>
-                "Indiatherapist provides expert breakup and divorce therapy
+                "India Therapist provides expert breakup and divorce therapy
                 services, guiding individuals through emotional challenges
                 post-separation. Our therapists offer support, coping
                 strategies, and tools to rebuild self-esteem, aiding in the
@@ -92,14 +93,13 @@ const Home = () => {
       {/* section 12 */}
       <section className="section12_container">
         <section className="section12_heading">
-          <h1 className="main_heading">Our Psychiatrist</h1>
+          <h1 className="main_heading">Our Therapist</h1>
           <p>
             Our team of expert psychiatrists provides unparalleled mental health
             care, delivering{" "}
           </p>
           <p>
-            compassionate and effective treatment tailored to each individual's
-            needs.
+            compassionate and effective treatment tailored to each NRI's needs.
           </p>
         </section>
         <section className={"section12_content"}>
@@ -122,7 +122,9 @@ const Home = () => {
             are Support 24/7 ”
           </h3>
           <section className="right_bottom_container">
-            <Button title={"contact us"} bg={"--button-bg"} />
+            <Link to={"/top-therapists"}>
+              <Button title={"contact us"} bg={"--button-bg"} />
+            </Link>
             <section className="contact_details">
               <RoundIcon icn={<FaPhoneAlt />} bg={" --icon-bg"} />
               <section className="contact_content">
