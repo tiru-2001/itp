@@ -18,6 +18,7 @@ import {
   Eap,
   Admin,
   Addtherapist,
+  Termsandcond,
 } from "./pages";
 import { Addbtn } from "./components";
 
@@ -43,6 +44,7 @@ const App = () => {
             <Route path="blogs" element={<Blogs />} />
             <Route path="register" element={<Register />} />
             <Route path="eap" element={<Eap />} />
+            <Route path="termsandcond" element={<Termsandcond />} />
           </Route>
         </Routes>
       </Router>
