@@ -12,6 +12,7 @@ import Counseling from "./counseling/Counseling";
 import Blogs from "./blogs/Blogs";
 import Admin from "./admin/Admin";
 import Addtherapist from "./addtherapist/Addtherapist";
+import Termsandcond from "./termsandcond/Termsandcond";
 
 export {
   Home,
@@ -28,4 +29,5 @@ export {
   Eap,
   Admin,
   Addtherapist,
+  Termsandcond,
 };

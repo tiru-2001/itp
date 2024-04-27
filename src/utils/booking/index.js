@@ -7,6 +7,8 @@ const doctorCard = [
     lang: "English, Hindi, Marathi",
     experience: "1 year",
   },
+
+
   {
     img: "https://img.freepik.com/free-photo/ambitious-businessman_1098-18160.jpg?w=996",
     name: "Rahul Kapoor",
